@@ -4,3 +4,9 @@
 *.jar
 *.war
 *.ear
+
+# Eclipse and Intellij Files #
+.classpath
+.idea
+.project
+.settings
