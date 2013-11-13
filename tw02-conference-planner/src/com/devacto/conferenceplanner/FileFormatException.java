@@ -26,5 +26,4 @@ public class FileFormatException extends Exception {
 		return lineNumber;
 	}
 	
-	
 }
