@@ -23,6 +23,8 @@ public class ConferencePlanner {
 	
 	// The name file from which data is to be read.
 	private static String inputFileName;
+
+	private static Scanner s;
 	
 	/**
 	 * Takes a String argument identifying the file to be opened. If the String is null, a filename
@@ -54,8 +56,7 @@ public class ConferencePlanner {
 
 	private static String getInputFileName() {
 		
-		// No command line file supplied so ask user for a filename
-		Scanner s = new Scanner(System.in);
+		s = new Scanner(System.in);
 		while (true) {
 			System.out.println("Enter input file name: ");
 			String input = s.nextLine();
