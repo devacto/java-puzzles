@@ -1,33 +1,25 @@
-ConferencePlanner
-=================
+## ConferencePlanner
 ConferencePlanner is a Java program that creates a conference schedule from a series of talks with titles and durations in minutes.
 
----------------
-Getting started
----------------
-(1) To get started, import the source code into Eclipse. Then, run the code. 
+### Getting started
+1. To get started, import the source code into Eclipse. Then, run the code. 
     (in the menu bar, go to Run -> Run).
-(2) When asked to enter the input file name, type in "testinput.txt"
-(3) The output file produced is called "testinput_txt_schedule.txt" 
+2. When asked to enter the input file name, type in "testinput.txt"
+3. The output file produced is called "testinput_txt_schedule.txt" 
 
------------
-Assumptions
------------
+### Assumptions
 * Requires user input for the name of the input file.
 * The length of the sessions are 60, 45, 30 or 15 minutes.
 * Sessions with keyword "lightning" have durations of 5 minutes.
 
------------------
-Code Explanations
------------------
+### Code Explanations
 * The main function is in the ConferencePlanner class.
 * Explanations on the different aspects of the code should be present in the comments.
 
----------------------
-Sample Console Output
----------------------
+### Sample Console Output
 A sample console output is below.
 
+```
 -------------- START SAMPLE CONSOLE OUTPUT -----------------------
 Enter input file name: 
 testinput.txt
@@ -61,3 +53,4 @@ Track 2:
 
 Output written to /Users/victor/Developer/Codes/Java/ConferencePlanner/testinput_txt_schedule.txt
 -------------- END SAMPLE CONSOLE OUTPUT -------------------------
+```
