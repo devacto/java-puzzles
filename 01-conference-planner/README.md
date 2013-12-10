@@ -1,5 +1,5 @@
-## ConferencePlanner
-ConferencePlanner is a Java program that creates a conference schedule from a series of talks with titles and durations in minutes.
+## Conference Planner
+Conference Planner is a Java program that creates a conference schedule from a series of talks with titles and durations in minutes.
 
 ### Getting started
 1. To get started, import the source code into Eclipse. Then, run the code. 
