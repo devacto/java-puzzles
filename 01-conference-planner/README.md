@@ -5,7 +5,8 @@ Conference Planner is a Java program that creates a conference schedule from a s
 1. To get started, import the source code into Eclipse. Then, run the code. 
     (in the menu bar, go to Run -> Run).
 2. When asked to enter the input file name, type in "testinput.txt"
-3. The output file produced is called "testinput_txt_schedule.txt" 
+3. The output file produced is called "testinput_txt_schedule.txt"
+4. `io` folder contains input and output files
 
 ### Assumptions
 * Requires user input for the name of the input file.
