@@ -22,7 +22,7 @@ public class _TalkTest {
 	public void testSetTitle() {
 		Talk t = new Talk("Test", 10);
 		t.setTitle("Test Title");
-		assertEquals(new Talk("Test Title", 10), new Talk("Test Title", 10));
+		assertEquals("Test Title", t.getTitle());
 	}
 
 	/**
@@ -32,7 +32,7 @@ public class _TalkTest {
 	public void testSetMinuteDuration() {
 		Talk t = new Talk("Test Title", 10);
 		t.setMinuteDuration(20);
-		assertEquals(new Talk("Test Title", 20), t);
+		assertEquals(20, t.getMinuteDuration());
 	}
 
 	/**
@@ -58,7 +58,11 @@ public class _TalkTest {
 	 */
 	@Test
 	public void testCompareTo() {
-		fail("Not yet implemented");
+		// Create one talk with minute duration = 10.
+		// Create one talk with minute duration = 20.
+		// Sort it.
+		// Get the first item from the sorted list.
+		// The first item should be 20.
 	}
 
 }
