@@ -4,6 +4,12 @@ import java.util.Date;
 
 import ac.victor.java.conferenceplanner.Talk;
 
+/**
+ * The session class gives a start time to a talk. 
+ * 
+ * @author victor
+ */
+
 public class Session {
 
 	private Talk talk;
