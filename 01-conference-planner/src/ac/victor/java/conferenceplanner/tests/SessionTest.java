@@ -1,17 +1,20 @@
 /**
  * 
  */
-package ac.victor.java.conferenceplanner;
+package ac.victor.java.conferenceplanner.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ac.victor.java.conferenceplanner.Session;
+import ac.victor.java.conferenceplanner.Talk;
+
 /**
  * @author victor
  *
  */
-public class _SessionTest {
+public class SessionTest {
 
 	/**
 	 * Test method for {@link ac.victor.java.conferenceplanner.Session#setTalk(ac.victor.java.conferenceplanner.Talk)}.

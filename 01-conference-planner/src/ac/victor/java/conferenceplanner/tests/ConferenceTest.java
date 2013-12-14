@@ -1,10 +1,10 @@
-package ac.victor.java.conferenceplanner;
+package ac.victor.java.conferenceplanner.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class _ConferenceTest {
+public class ConferenceTest {
 
 	@Test
 	public void testConference() {
