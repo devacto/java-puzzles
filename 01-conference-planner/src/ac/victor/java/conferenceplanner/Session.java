@@ -21,7 +21,6 @@ public class Session {
 	}
 	
 	public Session() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public void setTalk(Talk talk) {
