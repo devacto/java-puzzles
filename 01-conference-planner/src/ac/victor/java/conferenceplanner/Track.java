@@ -4,6 +4,12 @@ import java.util.ArrayList;
 
 import ac.victor.java.conferenceplanner.Session;
 
+/**
+ * A Track basically contains a list of Sessions.
+ * @author victor
+ * 
+ */
+
 public class Track {
 
 	private ArrayList<Session> sessions;
