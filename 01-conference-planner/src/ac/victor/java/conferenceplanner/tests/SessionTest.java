@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import ac.victor.java.conferenceplanner.Session;
 import ac.victor.java.conferenceplanner.Talk;
+import ac.victor.java.conferenceplanner.utils.DateTimeUtil;
 
 /**
  * @author victor
@@ -21,11 +22,11 @@ public class SessionTest {
 	 */
 	@Test
 	public void testSetTalk() {
-		// Create a talk.
-		// Create a session.
-		// Set the talk of the session.
-		// 
-		fail("Not yet implemented");
+		Talk t = new Talk("Test", 10);
+		Session s = new Session();
+		s.setTalk(t);
+		s.setStartTime(DateTimeUtil.generateTime(10, 0));
+		assertEquals(t, s.getTalk());
 	}
 
 	/**
@@ -33,7 +34,10 @@ public class SessionTest {
 	 */
 	@Test
 	public void testSetStartTime() {
-		fail("Not yet implemented");
+		Talk t = new Talk("Test", 10);
+		Session s = new Session(t, DateTimeUtil.generateTime(9, 0));
+		s.setStartTime(DateTimeUtil.generateTime(10, 0));
+		assertEquals(DateTimeUtil.generateTime(10, 0), DateTimeUtil.generateTime(10, 0));
 	}
 
 	/**
@@ -41,11 +45,9 @@ public class SessionTest {
 	 */
 	@Test
 	public void testGetStartTime() {
-		// Create a talk.
-		// Create a session using the talk and the start time.
-		
-		// TODO Create a helper function that will convert int hours int minutes into DateTime format.
-		fail("Not yet implemented");
+		Talk t = new Talk("Test Talk", 10);
+		Session s = new Session(t, DateTimeUtil.generateTime(9, 0));
+		assertEquals(DateTimeUtil.generateTime(9, 0), s.getStartTime());
 	}
 
 	/**
@@ -53,7 +55,9 @@ public class SessionTest {
 	 */
 	@Test
 	public void testGetTalk() {
-		fail("Not yet implemented");
+		Talk t = new Talk("Test", 10);
+		Session s = new Session(t, DateTimeUtil.generateTime(9, 0));
+		assertEquals(t, s.getTalk());
 	}
 
 }

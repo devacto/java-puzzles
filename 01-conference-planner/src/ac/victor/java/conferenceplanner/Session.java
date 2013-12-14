@@ -20,6 +20,10 @@ public class Session {
 		this.startTime = startTime;
 	}
 	
+	public Session() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void setTalk(Talk talk) {
 		this.talk = talk;
 	}
