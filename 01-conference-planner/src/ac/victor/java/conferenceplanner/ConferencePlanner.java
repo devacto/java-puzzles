@@ -11,7 +11,7 @@ import java.util.Iterator;
 import ac.victor.java.conferenceplanner.exceptions.FileFormatException;
 import ac.victor.java.conferenceplanner.utils.DateTimeUtil;
 
-public class Conference {
+public class ConferencePlanner {
 
 	private ArrayList<Track> tracks;
 
@@ -25,7 +25,7 @@ public class Conference {
 	 * @throws IOException
 	 */
 
-	public Conference(String inputFileName) throws FileFormatException, IOException {
+	public ConferencePlanner(String inputFileName) throws FileFormatException, IOException {
 		
 		// Create an inputParser object whose sole purpose is to parse input file into an array of talks.
 		File dataFile = new File(inputFileName);

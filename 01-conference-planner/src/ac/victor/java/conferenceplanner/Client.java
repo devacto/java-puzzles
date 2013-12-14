@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-import ac.victor.java.conferenceplanner.Conference;
+import ac.victor.java.conferenceplanner.ConferencePlanner;
 import ac.victor.java.conferenceplanner.exceptions.FileFormatException;
 
 /**
@@ -48,7 +48,7 @@ public class Client {
 		// Instantiate the Conference object with the filename specified. 
 		try {
 			@SuppressWarnings("unused")
-			Conference conference = new Conference(inputFileName);
+			ConferencePlanner conference = new ConferencePlanner(inputFileName);
 		} catch (FileNotFoundException e) {
 			System.err.println("Fatal error: " + e.getMessage() + "\nProgram terminated unsuccessfully.");
 		}
