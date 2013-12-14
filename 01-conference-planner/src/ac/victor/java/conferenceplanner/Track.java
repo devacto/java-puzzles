@@ -5,7 +5,6 @@ import java.util.ArrayList;
 /**
  * A Track basically contains a list of Sessions.
  * @author victor
- * 
  */
 
 public class Track {
@@ -18,6 +17,7 @@ public class Track {
 	}
 	
 	public void addSession (Session session) {
+		// TODO Add validation that the session added will not overlap with other sessions in the list.
 		this.sessions.add(session);
 	}
 	

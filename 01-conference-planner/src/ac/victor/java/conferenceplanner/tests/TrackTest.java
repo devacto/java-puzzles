@@ -14,7 +14,7 @@ import ac.victor.java.conferenceplanner.utils.DateTimeUtil;
 public class TrackTest {
 
 	@Test
-	public void testAddSession() {
+	public void testAddSessions() {
 		Track track = new Track();
 		Session session1 = new Session(new Talk("Test 1", 10), DateTimeUtil.generateTime(9, 0));
 		Session session2 = new Session(new Talk("Test 2", 10), DateTimeUtil.generateTime(9, 10));
@@ -24,6 +24,11 @@ public class TrackTest {
 		track.addSession(session2);
 		track.addSession(session3);
 		assertEquals(session1, track.getSession(0));
+	}
+	
+	@Test
+	public void testAddOverlappingSessions(){
+		// TODO When have time, test for overlapping sessions.
 	}
 
 	@Test
