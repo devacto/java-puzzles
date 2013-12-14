@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import ac.victor.java.conferenceplanner.Conference;
+import ac.victor.java.conferenceplanner.exceptions.FileFormatException;
 
 /**
  * Executable class which provides sanitised input to a conference class for timetable computation.

@@ -8,6 +8,9 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.Iterator;
 
+import ac.victor.java.conferenceplanner.exceptions.FileFormatException;
+import ac.victor.java.conferenceplanner.utils.DateTimeUtil;
+
 public class Conference {
 
 	private ArrayList<Track> tracks;
@@ -85,7 +88,7 @@ public class Conference {
 	private void arrangeAfternoonSessions(ArrayList<Talk> talks, Track track) {
 		
 		// Generates the starting hour and minutes of the afternoon session.
-		Date afternoonSessionTime = generateTime(13, 0);
+		Date afternoonSessionTime = DateTimeUtil.generateTime(13, 0);
 		int afternoonDurationCredit = 240;
 		while ((afternoonDurationCredit > 0) && (talks.isEmpty() == false)) {
 
@@ -112,13 +115,13 @@ public class Conference {
 		
 		// Create a lunch 'session' and insert it into the track.
 		Talk lunchTalk = new Talk("Lunch", 60);
-		Session lunchSession = new Session(lunchTalk, generateTime(12, 0));
+		Session lunchSession = new Session(lunchTalk, DateTimeUtil.generateTime(12, 0));
 		track.addSession(lunchSession);
 	}
 
 	private void arrangeMorningSessions(ArrayList<Talk> talks, Track track) {
 		// Fill up the track with sessions
-		Date morningSessionTime = generateTime(9, 0);
+		Date morningSessionTime = DateTimeUtil.generateTime(9, 0);
 
 		// Arrange morning session with total duration of 180 minutes.
 		int morningDurationCredit = 180;
@@ -149,15 +152,6 @@ public class Conference {
 
 		int numberOfTracks = totalRawDuration / 420 + 1;
 		return numberOfTracks;
-	}
-
-	// Helper function that generates a Time object from hour and minute integers.
-	private Date generateTime(int hour, int minute) {
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.HOUR_OF_DAY, hour);
-		cal.set(Calendar.MINUTE, minute);
-
-		return cal.getTime();
 	}
 
 	// Helper function that generates a Time object based on a previous time object and minute increment.

@@ -1,4 +1,4 @@
-package ac.victor.java.conferenceplanner;
+package ac.victor.java.conferenceplanner.exceptions;
 
 public class FileFormatException extends Exception {
 	

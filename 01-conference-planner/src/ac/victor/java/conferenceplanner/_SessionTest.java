@@ -14,18 +14,14 @@ import org.junit.Test;
 public class _SessionTest {
 
 	/**
-	 * Test method for {@link ac.victor.java.conferenceplanner.Session#Session(ac.victor.java.conferenceplanner.Talk, java.util.Date)}.
-	 */
-	@Test
-	public void testSession() {
-		fail("Not yet implemented");
-	}
-
-	/**
 	 * Test method for {@link ac.victor.java.conferenceplanner.Session#setTalk(ac.victor.java.conferenceplanner.Talk)}.
 	 */
 	@Test
 	public void testSetTalk() {
+		// Create a talk.
+		// Create a session.
+		// Set the talk of the session.
+		// 
 		fail("Not yet implemented");
 	}
 
@@ -42,6 +38,10 @@ public class _SessionTest {
 	 */
 	@Test
 	public void testGetStartTime() {
+		// Create a talk.
+		// Create a session using the talk and the start time.
+		
+		// TODO Create a helper function that will convert int hours int minutes into DateTime format.
 		fail("Not yet implemented");
 	}
 

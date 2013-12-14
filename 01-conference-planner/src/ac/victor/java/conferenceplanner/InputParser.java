@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import ac.victor.java.conferenceplanner.exceptions.FileFormatException;
+
 public class InputParser {
 
 	private static final String LIGHTNING = "lightning";
