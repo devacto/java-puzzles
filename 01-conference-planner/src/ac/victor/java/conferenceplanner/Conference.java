@@ -16,11 +16,11 @@ public class Conference {
 	public Conference() {
 	}
 	
-	private void addTrack(Track track) {
+	public void addTrack(Track track) {
 		this.tracks.add(track);
 	}
 
-	private Track getTrack(int index) {
+	public Track getTrack(int index) {
 		return this.tracks.get(index);
 	}
 	
