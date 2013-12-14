@@ -14,4 +14,12 @@ public class DateTimeUtil {
 		return cal.getTime();
 	}
 	
+	// Helper function that generates a Time object based on a previous time object and minute increment.
+	 public static Date addMinutesToTime(Date originalTime, int minutes) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(originalTime); 
+		cal.add(Calendar.MINUTE, minutes); 
+		return cal.getTime();
+	}
+	
 }

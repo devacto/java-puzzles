@@ -98,7 +98,7 @@ public class Conference {
 				if (t.getMinuteDuration() <= afternoonDurationCredit) {
 					afternoonDurationCredit -= t.getMinuteDuration();
 					Session s = new Session(t, afternoonSessionTime);
-					afternoonSessionTime = addMinutesToTime(afternoonSessionTime, t.getMinuteDuration());
+					afternoonSessionTime = DateTimeUtil.addMinutesToTime(afternoonSessionTime, t.getMinuteDuration());
 					track.addSession(s);
 					talks.remove(t);
 					break;
@@ -133,7 +133,7 @@ public class Conference {
 				if (t.getMinuteDuration() <= morningDurationCredit) {
 					morningDurationCredit -= t.getMinuteDuration();
 					Session s = new Session(t, morningSessionTime);
-					morningSessionTime = addMinutesToTime(morningSessionTime, t.getMinuteDuration());
+					morningSessionTime = DateTimeUtil.addMinutesToTime(morningSessionTime, t.getMinuteDuration());
 					track.addSession(s);
 					talks.remove(t);
 					break;
@@ -152,14 +152,6 @@ public class Conference {
 
 		int numberOfTracks = totalRawDuration / 420 + 1;
 		return numberOfTracks;
-	}
-
-	// Helper function that generates a Time object based on a previous time object and minute increment.
-	private Date addMinutesToTime(Date originalTime, int minutes) {
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(originalTime); 
-		cal.add(Calendar.MINUTE, minutes); 
-		return cal.getTime();
 	}
 
 }
