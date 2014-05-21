@@ -14,23 +14,41 @@ public class Track {
         this.sessions = sessions;
     }
 
-    public void addSession(Session session) {
+    public boolean addSession(Session session) {
         if (sessions.isEmpty()) {
             this.sessions.add(session);
+            return true;
         }
 
         // Cannot add session after 5pm.
         try {
             Date lastSessionTime = Constants.DEFAULT_DATE_FORMAT.parse(Constants.LAST_SESSION_TIME_STRING);
-            if (session.getEndTime().after(lastSessionTime)) throw new IllegalArgumentException("Session cannot " +
-                    "start after the specified time limit.");
+            if (session.getEndTime().after(lastSessionTime)) {
+                return false;
+            }
 
-            this.sessions.add(session);
-
-            // Need to check that sessions do not overlap.
+            if (checkNotOverlap(session)) {
+                this.sessions.add(session);
+                return true;
+            }
 
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+        return false;
+    }
+
+    private boolean checkNotOverlap(Session session) {
+        for (Session existingSession : this.sessions) {
+            if ((session.getStartTime().after(existingSession.getStartTime())) && (session.getStartTime().before(existingSession.getEndTime()))) {
+                return false;
+            }
+
+            if ((session.getEndTime().after(existingSession.getStartTime())) && (session.getEndTime().before(existingSession.getEndTime()))) {
+                return false;
+            }
+        }
+        return true;
     }
 }
