@@ -11,6 +11,18 @@ public class Session {
     private Date startTime;
     private Date endTime;
 
+    public Session(){}
+
+    public Session(String title, String startTimeInString, String endTimeInString) {
+        try {
+            this.title = title;
+            this.startTime = Constants.DEFAULT_DATE_FORMAT.parse(startTimeInString);
+            this.endTime = Constants.DEFAULT_DATE_FORMAT.parse(endTimeInString);
+        } catch (ParseException e){
+            System.out.println("Either start or end time is not valid.");
+        }
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -19,7 +31,7 @@ public class Session {
         try {
             this.startTime = Constants.DEFAULT_DATE_FORMAT.parse(startTime);
         } catch (ParseException e) {
-            e.printStackTrace();
+            System.out.println("Start time is not valid");
         }
     }
 
