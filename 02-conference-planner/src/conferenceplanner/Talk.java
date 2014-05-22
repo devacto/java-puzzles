@@ -13,9 +13,7 @@ public class Talk {
         setMinuteDuration(minuteDuration);
     }
 
-    public Talk() {
-        // Empty talk constructor
-    }
+    public Talk() {}
 
     public void setTitle(String title) {
         // Title cannot contain numbers
