@@ -43,7 +43,6 @@ public class BowlingGame {
 
             // Otherwise, add scores normally.
             } else {
-                // If not spare, then calculate as per normal
                 score += numberOfPinsKnockedInRolls(rollIndex);
                 rollIndex += 2;
             }
